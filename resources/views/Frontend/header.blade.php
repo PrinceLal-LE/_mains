@@ -18,7 +18,7 @@
           class="hover:text-[#ff7b02] transition-colors {{ Route::is('services') ? 'text-yellow-400 underline' : 'text-white' }}">Services</a>
       </li>
       <li><a href="{{ route('project') }}"
-          class="hover:text-[#ff7b02] transition-colors {{ Route::is('services') ? 'text-yellow-400 underline' : 'text-white' }}">Project</a>
+          class="hover:text-[#ff7b02] transition-colors {{ Route::is('project') ? 'text-yellow-400 underline' : 'text-white' }}">Project</a>
       </li>
       <li><a href="{{ route('contact') }}"
           class="hover:text-[#ff7b02] transition-colors {{ Route::is('contact') ? 'text-yellow-400 underline' : 'text-white' }}">Contact
