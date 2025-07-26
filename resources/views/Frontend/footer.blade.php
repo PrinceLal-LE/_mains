@@ -50,13 +50,13 @@
                 <h4 class="text-lg text-gray-900 font-medium mb-7">Project</h4>
                 <ul class="text-sm  transition-all duration-500">
                     <li class="mb-6">
-                        <a href="javascript:;" class="text-gray-600 hover:text-gray-900">Residential Projects</a>
+                        <a href="{{ route('project.residential') }}" class="text-gray-600 hover:text-gray-900">Residential Projects</a>
                     </li>
                     <li class="mb-6">
-                        <a href="javascript:;" class=" text-gray-600 hover:text-gray-900">Commerical Projects</a>
+                        <a href="{{ route('project.commercial') }}" class=" text-gray-600 hover:text-gray-900">Commerical Projects</a>
                     </li>
                     <li class="mb-6">
-                        <a href="javascript:;" class=" text-gray-600 hover:text-gray-900">Other Projects</a>
+                        <a href="{{ route('project.other') }}" class=" text-gray-600 hover:text-gray-900">Other Projects</a>
                     </li>
                 </ul>
             </div>          
