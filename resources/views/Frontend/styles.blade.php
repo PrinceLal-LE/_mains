@@ -85,4 +85,8 @@
 .heroSectionText {
     color: #003347;
 }
+
+.desktopPorjectMenu{
+    z-index: 1000;
+}
 </style>

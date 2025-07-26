@@ -17,9 +17,43 @@
       <li><a href="{{ route('services') }}"
           class="hover:text-[#ff7b02] transition-colors {{ Route::is('services') ? 'text-yellow-400 underline' : 'text-white' }}">Services</a>
       </li>
-      <li><a href="{{ route('project') }}"
+      <!-- <li><a href="{{ route('project') }}"
           class="hover:text-[#ff7b02] transition-colors {{ Route::is('project') ? 'text-yellow-400 underline' : 'text-white' }}">Project</a>
+      </li> -->
+
+      <!-- Desktop Navigation -->
+      <li class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+        <a href="#" @click.prevent="open = !open"
+          class="hover:text-[#ff7b02] transition-colors {{ Route::is('project*') ? 'text-yellow-400 underline' : 'text-white' }} flex items-center gap-1">
+          Project
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </a>
+        <!-- Dropdown Menu -->
+        <ul x-show="open" x-transition class="absolute left-0 mt-2 w-48 bg-[#003347] shadow-lg rounded-md py-1 z-50">
+          <!-- Dropdown items here -->
+          <li>
+            <a href="{{ route('project.residential') }}"
+              class="block px-4 py-2 hover:bg-[#003347]/80 hover:text-[#ff7b02] {{ Route::is('project.residential') ? 'text-yellow-400' : 'text-white' }}">
+              Residential
+            </a>
+          </li>
+          <li>
+            <a href="{{ route('project.commercial') }}"
+              class="block px-4 py-2 hover:bg-[#003347]/80 hover:text-[#ff7b02] {{ Route::is('project.commercial') ? 'text-yellow-400' : 'text-white' }}">
+              Commercial
+            </a>
+          </li>
+          <li>
+            <a href="{{ route('project.other') }}"
+              class="block px-4 py-2 hover:bg-[#003347]/80 hover:text-[#ff7b02] {{ Route::is('project.other') ? 'text-yellow-400' : 'text-white' }}">
+              Other
+            </a>
+          </li>
+        </ul>
       </li>
+
       <li><a href="{{ route('contact') }}"
           class="hover:text-[#ff7b02] transition-colors {{ Route::is('contact') ? 'text-yellow-400 underline' : 'text-white' }}">Contact
           Us</a></li>
@@ -116,9 +150,34 @@
     class="h-20 shadow-[-3rem_3rem_3rem_rgba(0,0,0,0.7)] bg-[#003347] hover:bg-[#003347]/80 animate-navAnimation [animation-delay:400ms]">
     <a href="{{ route('services') }}" class="flex items-center h-full px-6">Services</a>
   </li>
-  <li
-    class="h-20 shadow-[-3rem_3rem_3rem_rgba(0,0,0,0.7)] bg-[#003347] hover:bg-[#003347]/80 animate-navAnimation [animation-delay:400ms]">
-    <a href="{{ route('project') }}" class="flex items-center h-full px-6">Project</a>
+  <li class="relative group h-20 bg-[#003347] hover:bg-[#003347]/80" x-data="{ open: false }" @click.away="open = false">
+    <div @click="open = !open" class="flex items-center justify-between h-full px-6 cursor-pointer">
+      <span>Project</span>
+      <svg class="w-4 h-4" :class="{ 'transform rotate-180': open }" fill="none" stroke="currentColor"
+        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </div>
+    <ul x-show="open" x-transition class="bg-[#003347]/90">
+      <li>
+        <a href="{{ route('project.residential') }}"
+          class="block px-4 py-2 hover:bg-[#003347]/80 hover:text-[#ff7b02] {{ Route::is('project.residential') ? 'text-yellow-400' : 'text-white' }}">
+          Residential
+        </a>
+      </li>
+      <li>
+        <a href="{{ route('project.commercial') }}"
+          class="block px-4 py-2 hover:bg-[#003347]/80 hover:text-[#ff7b02] {{ Route::is('project.commercial') ? 'text-yellow-400' : 'text-white' }}">
+          Commercial
+        </a>
+      </li>
+      <li>
+        <a href="{{ route('project.other') }}"
+          class="block px-4 py-2 hover:bg-[#003347]/80 hover:text-[#ff7b02] {{ Route::is('project.other') ? 'text-yellow-400' : 'text-white' }}">
+          Other
+        </a>
+      </li>
+    </ul>
   </li>
   <li
     class="h-20 shadow-[-3rem_3rem_3rem_rgba(0,0,0,0.7)] bg-[#003347] hover:bg-[#003347]/80 animate-navAnimation [animation-delay:600ms]">
