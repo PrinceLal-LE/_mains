@@ -24,7 +24,6 @@
                     </a>
                     <div class="p-4">
                         <h3 class="text-lg font-semibold text-gray-800 mb-2">PDF - {{ $imageIndex }}</h3>
-                        <p class="text-sm text-gray-600 mb-4">Serial Number: {{ $project['Serial_number'] }}</p>
                         <a href="{{ asset('images/projects/' . $project['Image_File']) }}" target="_blank" class="inline-block w-full text-center bg-[#c0392b] text-white py-2 px-4 rounded-md hover:bg-[#e74c3c] transition-colors">
                             View PDF
                         </a>
@@ -37,7 +36,6 @@
                      </a>
                     <div class="p-4">
                         <h3 class="text-lg font-semibold text-gray-800 mb-2">Floor Plan - {{ $imageIndex }}</h3>
-                        <p class="text-sm text-gray-600 mb-4">Serial Number: {{ $project['Serial_number'] }}</p>
                         <a href="{{ asset('images/projects/' . $project['Image_File']) }}" target="_blank" class="inline-block w-full text-center bg-[#003347] text-white py-2 px-4 rounded-md hover:bg-[#004a66] transition-colors">
                             View Full Image
                         </a>
@@ -50,7 +48,7 @@
                     </a>
                     <div class="p-4">
                         <h3 class="text-lg font-semibold text-gray-800 mb-2">Image - {{ $imageIndex }}</h3>
-                        <p class="text-sm text-gray-600 mb-4">Serial Number: {{ $project['Serial_number'] }}</p>
+                        <!-- <p class="text-sm text-gray-600 mb-4">Serial Number: {{ $project['Serial_number'] }}</p> -->
                         <a href="{{ asset('images/projects/' . $project['Image_File']) }}" target="_blank" class="inline-block w-full text-center bg-[#003347] text-white py-2 px-4 rounded-md hover:bg-[#004a66] transition-colors">
                             View Full Image
                         </a>
